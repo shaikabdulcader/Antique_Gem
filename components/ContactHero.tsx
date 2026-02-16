@@ -6,19 +6,17 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactHero() {
     return (
-        <section className="relative min-h-[550px] h-auto lg:h-[550px] w-full overflow-hidden flex items-center justify-center font-montserrat">
+        <section className="relative min-h-[550px] h-auto lg:h-[550px] w-full overflow-hidden flex items-center justify-center font-sans">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/hero.png"
+                    src="/hero.webp"
                     alt="Contact Hero Background"
                     fill
                     className="object-cover"
                     priority
-
                 />
-                <div className="absolute inset-0 bg-[#520000]/90 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#520000]/80 to-[#520000]/80" />
+                <div className="absolute inset-0 hero-overlay" />
             </div>
 
             <div className="mx-auto w-[90%] max-w-7xl px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start h-full pt-28 pb-12 lg:pt-36">
@@ -29,7 +27,7 @@ export default function ContactHero() {
                     transition={{ duration: 0.8 }}
                     className="text-white max-w-2xl"
                 >
-                    <p className="text-[20px] leading-[36px] font-normal tracking-normal text-justify">
+                    <p className="text-xl md:text-[22px] leading-[1.7] font-normal tracking-[0.3px] text-justify">
                         We believe buying a natural gemstone should feel clear, safe, and comfortable. Our specialists are available to guide you with honest advice and quick responses.
                     </p>
                 </motion.div>
@@ -43,17 +41,17 @@ export default function ContactHero() {
                 >
                     <div className="flex items-center gap-4">
                         <Phone className="w-6 h-6 fill-white text-white shrink-0" />
-                        <span className="text-[18px] tracking-wide">+91 80560 98942</span>
+                        <span className="text-[18px] tracking-[0.5px]">+91 80560 98942</span>
                     </div>
 
                     <div className="flex items-center gap-4">
                         <Mail className="w-6 h-6 text-white shrink-0" />
-                        <span className="text-[18px] tracking-wide">antiquegem@gmail.com</span>
+                        <span className="text-[18px] tracking-[0.5px]">antiquegem@gmail.com</span>
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 fill-white text-[#520000] shrink-0 mt-1" />
-                        <div className="text-[18px] leading-relaxed">
+                        <MapPin className="w-6 h-6 fill-white text-primary shrink-0 mt-1" />
+                        <div className="text-[18px] leading-relaxed tracking-[0.5px]">
                             <p>245/78, Periya Nesavu</p>
                             <p>Street,</p>
                             <p>Kayalpatnam - 628 204</p>
@@ -64,5 +62,6 @@ export default function ContactHero() {
                 </motion.div>
             </div>
         </section>
+
     );
 }

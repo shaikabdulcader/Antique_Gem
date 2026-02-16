@@ -8,7 +8,7 @@ interface FooterProps {
 
 export default function Footer({ className }: FooterProps) {
     return (
-        <footer className={`bg-[#420000] text-white font-montserrat ${className || "pt-16 pb-8"}`}>
+        <footer className={`bg-primary text-white font-sans ${className || "pt-16 pb-8"}`}>
             <div className="mx-auto w-[90%] max-w-7xl px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-start">
             
                 {/* Contact Info - Left */}
@@ -63,8 +63,10 @@ export default function Footer({ className }: FooterProps) {
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
+                            title="Antique Gem Store Location"
                             referrerPolicy="no-referrer-when-downgrade"
                         />
+
                     </div>
                 </div>
             </div>

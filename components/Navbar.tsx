@@ -12,7 +12,7 @@ export default function Navbar() {
             <div className="glass-nav rounded-[40px] px-8 py-4 flex items-center justify-between transition-all duration-300 relative">
                 <Link href="/" className="flex items-center gap-2 group">
                     <Gem className="w-8 h-8 text-white transition-transform duration-300 group-hover:scale-110" />
-                    <span className="text-white font-heading text-xl tracking-widest font-bold">
+                    <span className="text-white font-logo text-[25px] font-normal leading-none tracking-normal">
                         ANTIQUE GEM
                     </span>
                 </Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
                         <Link
                             key={item}
                             href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                            className="text-white hover:text-red-500 transition-colors duration-300 font-medium text-sm tracking-widest uppercase"
+                            className="text-white hover:text-white/70 transition-colors duration-300 font-montserrat font-normal text-[22.69px] leading-[22px] tracking-normal"
                         >
                             {item}
                         </Link>
@@ -34,18 +34,20 @@ export default function Navbar() {
                 <button
                     className="md:hidden text-white p-2"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
                 >
                     {isOpen ? <X /> : <Menu />}
                 </button>
 
+
                 {/* Mobile Menu Dropdown */}
                 {isOpen && (
-                    <div className="absolute top-full left-0 right-0 mt-4 p-6 bg-[#520000] border border-white/10 shadow-2xl rounded-[30px] flex flex-col items-center gap-6 md:hidden">
+                    <div className="absolute top-full left-0 right-0 mt-4 p-6 bg-primary border border-white/10 shadow-2xl rounded-[30px] flex flex-col items-center gap-6 md:hidden">
                         {["Home", "About", "Contact"].map((item) => (
                             <Link
                                 key={item}
                                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                className="text-white text-lg tracking-widest uppercase hover:text-red-500 transition-colors"
+                                className="text-white font-montserrat font-normal text-[22.69px] leading-[22px] tracking-normal hover:text-white/70 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item}
@@ -55,5 +57,7 @@ export default function Navbar() {
                 )}
             </div>
         </nav>
+
     );
 }
+

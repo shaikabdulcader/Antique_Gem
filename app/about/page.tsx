@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-light-grey selection:bg-maroon selection:text-white">
+        <main className="min-h-screen bg-light-bg selection:bg-primary selection:text-white">
             <Navbar />
             <AboutHero />
             <Mission />
@@ -13,3 +13,4 @@ export default function About() {
         </main>
     );
 }
+

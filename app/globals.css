@@ -1,5 +1,7 @@
 
+
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
@@ -9,36 +11,59 @@ html {
 html::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
-@theme {
-  --font-sans: var(--font-inter);
-  --font-heading: 'Good Times', sans-serif;
 
-  --color-maroon: #520000;
-  --color-maroon-dark: #5A0000;
-  --color-light-grey: #EFEFEF;
-  --color-sand: #CFAE70;
-  --color-gold: #8C6239;
-  --color-icon-white: #F8F8F8;
-  --color-divider: #D9D9D9;
+@theme {
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-orbitron);
+  --font-logo: 'Good Times', sans-serif;
+  --font-montserrat: var(--font-montserrat);
+
+  --color-primary: #7A0A0A;
+  --color-primary-dark: #5C0606;
+  --color-light-bg: #E9E9E9;
+  --color-text-dark: #2E2E2E;
+  --color-text-secondary: #444444;
+  --color-white: #FFFFFF;
+  --color-footer-text: #E6E6E6;
+  
+  --radius-button: 30px;
+  --radius-card: 20px;
+  --radius-navbar: 40px;
+
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
 }
 
 :root {
-  --background: #EFEFEF;
-  --foreground: #520000;
+  --background: #E9E9E9;
+  --foreground: #2E2E2E;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 @layer utilities {
   .glass-nav {
-    @apply bg-white/25 backdrop-blur-md border border-white/20 shadow-lg;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
   }
 
   .text-glow {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .soft-shadow {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   }
 }
