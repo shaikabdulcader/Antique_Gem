@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Outfit, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
+import { Analytics } from "@vercel/analytics/next"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {
@@ -34,15 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link href="https://fonts.cdnfonts.com/css/good-times" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} ${montserrat.variable} antialiased bg-light-grey text-maroon`}
+        className={`${montserrat.variable} antialiased bg-light-bg text-text-dark`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
 }
+
+

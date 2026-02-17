@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // Reverted to match user design screenshot
 export default function Mission() {
     return (
-        <section className="bg-white py-16">
+        <section className="bg-light-bg py-16">
             <div className="mx-auto w-[90%] max-w-7xl px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -14,11 +14,11 @@ export default function Mission() {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <h2 className="text-maroon font-heading text-4xl font-semibold tracking-widest uppercase mb-12">
+                    <h2 className="text-primary section-title mb-12">
                         OUR MISSION:
                     </h2>
 
-                    <div className="space-y-8 text-[#2E2E2E] font-montserrat text-[20px] leading-[36px] font-normal tracking-normal text-justify">
+                    <div className="space-y-8 text-text-dark font-normal text-[20px] md:text-[27.03px] leading-[1.2] md:leading-[100%] tracking-normal text-justify">
                         <p>
                             To make purchasing real, untreated gemstones transparent, secure, and accessible, no matter where you live.
                         </p>
@@ -32,5 +32,6 @@ export default function Mission() {
                 </motion.div>
             </div>
         </section>
+
     );
 }
