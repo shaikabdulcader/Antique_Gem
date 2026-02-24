@@ -46,7 +46,7 @@ export default function ProductGrid() {
                                 transition={{ duration: 0.3 }}
                                 className="group cursor-pointer"
                             >
-                                <div className="relative aspect-square rounded-[20px] overflow-hidden soft-shadow transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-white">
+                                <div className="relative aspect-square rounded-[20px] overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-transparent md:bg-white md:soft-shadow">
                                     <Image
                                         src={product.image}
                                         alt={product.name}

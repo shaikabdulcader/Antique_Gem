@@ -14,7 +14,7 @@ export default function Mission() {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <h2 className="text-primary section-title mb-12">
+                    <h2 className="text-primary section-title mb-12 text-center">
                         OUR MISSION:
                     </h2>
 
