@@ -18,7 +18,7 @@ export default function Mission() {
                         OUR MISSION:
                     </h2>
 
-                    <div className="space-y-8 text-text-dark font-normal text-[20px] md:text-[27.03px] leading-[1.2] md:leading-[100%] tracking-normal text-justify">
+                    <div className="space-y-8 text-text-dark font-normal text-[20px] md:text-[27.03px] leading-[1.2] md:leading-[100%] tracking-normal text-center">
                         <p>
                             To make purchasing real, untreated gemstones transparent, secure, and accessible, no matter where you live.
                         </p>
